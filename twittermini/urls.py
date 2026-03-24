@@ -7,5 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('user_account.urls')),
     path('accounts/', include('allauth.urls')),
+    path('posts/',include('post.urls')),
+    path('hashtag/',include('hashtag.urls')),
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)    
